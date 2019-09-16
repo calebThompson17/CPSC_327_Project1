@@ -1,11 +1,11 @@
 CFLAGS = -Wall
 #target exe
-all: hello.o myfunc.o
-        g++ $(CFLAGS) -o myexe hello.o myfunc.o
+all: main.o myfunc.o
+        g++ $(CFLAGS) -o myexe main.o myfunc.o
 
 #rebuild if either of the files below change
-hello.o: hello.cpp myfunc.h
-        g++ $(CFLAGS) -c hello.cpp
+main.o: main.cpp myfunc.h
+        g++ $(CFLAGS) -c main.cpp
 
 #rebuild if either of the files below change
 myfunc.o: myfunc.cpp myfunc.h
